@@ -1,0 +1,26 @@
+{
+  "name": "type-challenges-solutions",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@7.1.1",
+  "description": "My type challenges solutions",
+  "license": "MIT",
+  "scripts": {
+    "new": "tsx ./scripts/new.ts",
+    "update": "pnpm sync && pnpm readme",
+    "sync": "tsx ./scripts/sync.ts",
+    "readme": "tsx ./scripts/readme.ts",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@holazz/eslint-config": "^1.0.7",
+    "@octokit/rest": "^18.12.0",
+    "@type-challenges/utils": "^0.1.1",
+    "@types/node": "^17.0.34",
+    "down-git": "^0.0.2",
+    "eslint": "^8.15.0",
+    "fast-glob": "^3.2.11",
+    "tsx": "^3.2.0",
+    "typescript": "^4.6.4"
+  }
+}

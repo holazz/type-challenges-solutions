@@ -1,0 +1,22 @@
+name: Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: pnpm
+      - run: pnpm i
+      - run: pnpm update
+      - run: pnpm lint --fix
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: 'chore: update index'
