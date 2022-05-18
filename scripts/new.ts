@@ -5,7 +5,7 @@ import { quizSet } from '../meta.json'
 import { QUIZ_ROOT } from './constant'
 
 async function newQuiz(no: number | string) {
-  if (!no) process.exit(1)
+  if (!no) return
   const quiz = no.toString().padStart(5, '0')
   const path = quizSet.find(name => name.startsWith(quiz))
   const output = `${QUIZ_ROOT}/${path}`
