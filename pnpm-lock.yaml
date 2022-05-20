@@ -4,22 +4,22 @@ specifiers:
   '@holazz/eslint-config': ^1.0.7
   '@octokit/rest': ^18.12.0
   '@type-challenges/utils': ^0.1.1
-  '@types/node': ^17.0.34
+  '@types/node': ^17.0.35
   down-git: ^0.0.3
   eslint: ^8.15.0
   fast-glob: ^3.2.11
-  tsx: ^3.3.1
+  tsx: ^3.4.0
   typescript: ^4.6.4
 
 devDependencies:
   '@holazz/eslint-config': 1.0.7_hcfsmds2fshutdssjqluwm76uu
   '@octokit/rest': 18.12.0
   '@type-challenges/utils': 0.1.1
-  '@types/node': 17.0.34
+  '@types/node': 17.0.35
   down-git: 0.0.3
   eslint: 8.15.0
   fast-glob: 3.2.11
-  tsx: 3.3.1
+  tsx: 3.4.0
   typescript: 4.6.4
 
 packages:
@@ -343,8 +343,8 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
-  /@types/node/17.0.34:
-    resolution: {integrity: sha512-XImEz7XwTvDBtzlTnm8YvMqGW/ErMWBsKZ+hMTvnDIjGCKxwK5Xpc+c/oQjOauwq8M4OS11hEkpjX8rrI/eEgA==}
+  /@types/node/17.0.35:
+    resolution: {integrity: sha512-vu1SrqBjbbZ3J6vwY17jBs8Sr/BKA+/a/WtjRG+whKg1iuLFOosq872EXS0eXWILdO36DHQQeku/ZcL6hz2fpg==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
@@ -2629,8 +2629,8 @@ packages:
       typescript: 4.6.4
     dev: true
 
-  /tsx/3.3.1:
-    resolution: {integrity: sha512-YYaW4+MWtSsc659Olt1XKPl9AEWHTkcb3X1UPe7JHp1ykYuOWJcGQEq4KZYo2Q9lWgTdV4hkxW81M8txJ06srg==}
+  /tsx/3.4.0:
+    resolution: {integrity: sha512-WWakMoC5OqUXvOVZuyAySyETjAZ9rJxZXRbbOhYXDCeHF95hQUBa07UwUFu1yprlnrJ/W7XWfA99YTNKO//KxQ==}
     hasBin: true
     dependencies:
       '@esbuild-kit/cjs-loader': 2.0.0
