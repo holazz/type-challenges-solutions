@@ -9,7 +9,7 @@ pnpm new [no] # question number
 ## Update index
 
 ```bash
-pnpm update # run automatically in workflows
+pnpm sync && pnpm readme # run automatically in workflows
 ```
 
 ## Solutions

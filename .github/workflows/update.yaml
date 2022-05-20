@@ -5,7 +5,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  start:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,7 +15,8 @@ jobs:
           node-version: 16.x
           cache: pnpm
       - run: pnpm i
-      - run: pnpm update
+      - run: pnpm sync && pnpm readme
+
       - run: pnpm lint --fix
       - uses: EndBug/add-and-commit@v9
         with:

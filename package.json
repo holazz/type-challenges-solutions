@@ -8,7 +8,6 @@
   "license": "MIT",
   "scripts": {
     "new": "tsx ./scripts/new.ts",
-    "update": "pnpm sync && pnpm readme",
     "sync": "tsx ./scripts/sync.ts",
     "readme": "tsx ./scripts/readme.ts",
     "lint": "eslint ."
