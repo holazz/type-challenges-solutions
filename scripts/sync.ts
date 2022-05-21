@@ -1,6 +1,6 @@
 import { writeFile } from 'node:fs/promises'
 import { Octokit } from '@octokit/rest'
-import { DifficultyRank, META_PATH } from './constant'
+import { DifficultyRank, META_PATH } from './utils'
 
 async function fetchRemoteQuizzes() {
   const octokit = new Octokit()

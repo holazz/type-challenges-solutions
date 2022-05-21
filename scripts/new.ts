@@ -2,10 +2,46 @@ import { existsSync, promises as fs } from 'node:fs'
 import fg from 'fast-glob'
 import { download } from 'down-git'
 import { quizSet } from '../meta.json'
-import { QUIZ_ROOT } from './constant'
+import { DifficultyRank, QUIZ_ROOT, loadQuiz, loadQuizzes } from './utils'
+import type { Difficulty } from './utils'
 
-async function newQuiz(no: number | string) {
-  if (!no) return
+type QuizzesNo = {
+  [K in Difficulty]: number[]
+}
+
+async function getQuizzesNoByDifficulty(): Promise<QuizzesNo> {
+  return quizSet.reduce(async (pre, cur) => {
+    const { no, difficulty } = await loadQuiz(cur)
+    ;(await pre as QuizzesNo)[difficulty].push(no)
+    return pre
+  }, DifficultyRank.reduce((pre, cur) => {
+    return Object.assign(pre, {
+      [cur]: [],
+    })
+  }, {})) as QuizzesNo
+}
+
+async function getNextQuizNo() {
+  const quizzes = await loadQuizzes()
+  const quizzesNo = await getQuizzesNoByDifficulty()
+  for (let i = 0; i < DifficultyRank.length; i++) {
+    const n1 = quizzes.filter(quiz => quiz.difficulty === DifficultyRank[i] as Difficulty).map(quiz => quiz.no)
+    const n2 = quizzesNo[DifficultyRank[i] as Difficulty]
+    if (n1.length < n2.length) {
+      const rest = [...n1.filter(x => !n2.includes(x)), ...n2.filter(x => !n1.includes(x))].sort((a, b) => a - b)
+      return rest[0]
+    }
+  }
+}
+
+async function newQuiz(no?: number | string): Promise<void> {
+  if (!no) no = await getNextQuizNo()
+
+  if (!no) {
+    console.log('The next question does not exist.')
+    return
+  }
+
   const quiz = no.toString().padStart(5, '0')
   const path = quizSet.find(name => name.startsWith(quiz))
   const output = `${QUIZ_ROOT}/${path}`
