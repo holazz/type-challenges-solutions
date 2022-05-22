@@ -24,7 +24,7 @@ async function updateREADME(quizzes: Quiz[]) {
   for (const quiz of quizzesByDifficulty) {
     if (prev !== quiz.difficulty)
       challengesREADME += `${prev ? '</ul>' : ''}<h3>${toDifficultyPlainText(quiz.difficulty, quizzesByDifficulty.filter(q => q.difficulty === quiz.difficulty).length)}</h3><ul>`
-    challengesREADME += `<li>${toPlanTextLink(`./questions/${quiz.path}/README.md`, `${quiz.no}・${quiz.title}`)}</li>`
+    challengesREADME += `<li>${toPlanTextLink(`./questions/${quiz.path}`, `${quiz.no}・${quiz.title}`)}</li>`
     prev = quiz.difficulty
   }
   challengesREADME += '</ul>'
