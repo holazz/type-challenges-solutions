@@ -5,7 +5,7 @@ Implement a utils `If` which accepts condition `C`, a truthy return type `T`, an
 For example:
 
 ```ts
-type A = If<true, 'a', 'b'>  // expected to be 'a'
+type A = If<true, 'a', 'b'> // expected to be 'a'
 type B = If<false, 'a', 'b'> // expected to be 'b'
 ```
 

@@ -18,7 +18,6 @@ jobs:
       - run: pnpm i
       - run: pnpm sync && pnpm readme
 
-      - run: pnpm lint --fix
       - uses: EndBug/add-and-commit@v9
         with:
           message: 'chore: update index'
