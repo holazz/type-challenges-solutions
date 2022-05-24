@@ -10,8 +10,7 @@
     "new": "tsx ./scripts/new.ts",
     "sync": "tsx ./scripts/sync.ts",
     "readme": "tsx ./scripts/readme.ts",
-    "lint": "eslint .",
-    "pre-push": "pnpm sync && pnpm readme"
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@holazz/eslint-config": "^1.0.7",
