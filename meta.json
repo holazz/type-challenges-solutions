@@ -132,13 +132,14 @@
     "08804-hard-two-sum",
     "08987-medium-subsequence",
     "09155-hard-validdate",
-    "09160-hard-assign"
+    "09160-hard-assign",
+    "09775-hard-capitalize-nest-object-keys"
   ],
   "rankCount": {
     "warm": 1,
     "easy": 13,
     "medium": 68,
-    "hard": 37,
+    "hard": 38,
     "extreme": 14
   }
 }
