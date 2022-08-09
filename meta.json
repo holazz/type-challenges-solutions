@@ -133,13 +133,14 @@
     "08987-medium-subsequence",
     "09155-hard-validdate",
     "09160-hard-assign",
-    "09775-hard-capitalize-nest-object-keys"
+    "09775-hard-capitalize-nest-object-keys",
+    "14188-hard-run-length-encoding"
   ],
   "rankCount": {
     "warm": 1,
     "easy": 13,
     "medium": 68,
-    "hard": 38,
+    "hard": 39,
     "extreme": 14
   }
 }
