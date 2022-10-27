@@ -134,12 +134,13 @@
     "09155-hard-validdate",
     "09160-hard-assign",
     "09775-hard-capitalize-nest-object-keys",
-    "14188-hard-run-length-encoding"
+    "14188-hard-run-length-encoding",
+    "17973-medium-deepmutable"
   ],
   "rankCount": {
     "warm": 1,
     "easy": 13,
-    "medium": 68,
+    "medium": 69,
     "hard": 39,
     "extreme": 14
   }
