@@ -134,14 +134,18 @@
     "09155-hard-validdate",
     "09160-hard-assign",
     "09775-hard-capitalize-nest-object-keys",
+    "09896-medium-huo-qu-shu-zu-de-zhong-jian-yuan-su",
+    "10969-medium-zheng-shu",
     "14188-hard-run-length-encoding",
+    "15260-hard-tree-path-array",
+    "16259-medium-jiang-lei-xing-wei-zi-mian-lei-xing-biao-qian-lei-xing-de-shu-xing-zhuan-huan-wei-ji-ben-lei-xing",
     "17973-medium-deepmutable"
   ],
   "rankCount": {
     "warm": 1,
     "easy": 13,
-    "medium": 69,
-    "hard": 39,
+    "medium": 72,
+    "hard": 40,
     "extreme": 14
   }
 }
