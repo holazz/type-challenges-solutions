@@ -145,13 +145,14 @@
     "16259-medium-to-primitive",
     "17973-medium-deepmutable",
     "18142-medium-all",
-    "18220-medium-filter"
+    "18220-medium-filter",
+    "19458-hard-snakecase"
   ],
   "rankCount": {
     "warm": 1,
     "easy": 13,
     "medium": 75,
-    "hard": 43,
+    "hard": 44,
     "extreme": 14
   }
 }
